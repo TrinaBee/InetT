@@ -7,56 +7,56 @@
 <body>
 
 <?php
+
+// Beispiel einer einfachen Klasse
+class Auto {
+    public $marke;
+    public $modell;
+    public $baujahr;
+    public $farbe;
+    public $ps;
+
+    public function __construct($marke, $modell, $baujahr, $farbe, $ps) {
+        $this->marke = $marke;
+        $this->modell = $modell;
+        $this->baujahr = $baujahr;
+        $this->farbe = $farbe;
+        $this->ps = $ps;
+    }
+
+    public function ausgeben() {
+        echo "Auto: $this->marke $this->modell, BJ: $this->baujahr, Farbe: $this->farbe, PS:$this->ps";
+    }
+}
+
+// Erstellen eines Objekts
+//$meinAuto = new Auto("Tesla", "Model S");
+//$meinAuto->ausgeben();  // Ausgabe: Auto: Tesla Model S
 $maier = [
-        "Vater Alfred" => [
-                "Marke" => "Audi",
-                "Typ" => "A4",
-                "Baujahr" => "2023",
-                "Farbe" => "schwarz",
-                "PS" => "180"
-        ],
-        "Mutter Ingrid" => [
-                "Marke" => "VW",
-                "Typ" => "Käfer",
-                "Baujahr" => "2019",
-                "Farbe" => "gelb",
-                "PS" => "110"
-        ],
-        "Tochter Lisa" => [
-                "Marke" => "VW",
-                "Typ" => "up!",
-                "Baujahr" => "2025",
-                "Farbe" => "rot",
-                "PS" => "90"
-        ]
+        "Vater Alfred" => [ new Auto("Audi","A4","2023","schwarz","180")],
+        "Mutter Ingrid" => [ new Auto("VW","Käfer","2019","gelb","110")],
+        "Tochter Lisa" => [ new Auto("VW","up!","2025","rot","90")]
 ];
 echo "<pre>";
-print_r($maier);
+//print_r($maier);
 echo "</pre>";
 echo "<hr>";
-foreach ($maier as $mitglied => $fahrzeug){
-    echo "<ul><li>$mitglied</li><ul>";
-    foreach ($fahrzeug as $key => $value){
-        echo "<li>$key : $value</li>";
-    }
-    echo "</ul></ul>";
-}
-echo "<hr>";
+//foreach ($maier as $mitglied => $fahrzeug){
+//    echo "<ul><li>$mitglied</li><ul>";
+//    echo "<li>$fahrzeug->ausgeben()</li>";
+//    }
+//    echo "</ul></ul>";
+//}
+//echo "<hr>";
 
-$maier["Vater Alfred2"] = [
-        "Marke" => "Porsche",
-        "Typ" => "unbekannt",
-        "Baujahr" => "2025",
-        "Farbe" => "weiß",
-        "PS" => "460"
-];
-foreach ($maier as $mitglied => $fahrzeug){
-    echo "<ul><li>$mitglied</li><ul>";
-    foreach ($fahrzeug as $key => $value){
-        echo "<li>$key : $value</li>";
-    }
-    echo "</ul></ul>";
-}
+$maier["Vater Alfred2"] = [ new Auto("Porsche","unbekannt","2025","weiß","460")];
+//foreach ($maier as $mitglied => $fahrzeug){
+//    echo "<ul><li>$mitglied</li><ul>";
+//    foreach ($fahrzeug as $key => $value){
+//        echo "<li>$key : $value</li>";
+//    }
+//    echo "</ul></ul>";
+//}
 ?>
 
 
