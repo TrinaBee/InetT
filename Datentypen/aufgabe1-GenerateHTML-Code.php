@@ -7,6 +7,7 @@
 <body>
 
 <?php
+//hoehe muss ungrade sein
 $hoehe = 9;
 
 $mitte = ($hoehe + 1) / 2;
@@ -47,7 +48,7 @@ for ($k = 1; $k <= $hoehe; $k++) {
     }
 
     $leerzeichen = ($hoehe +2)-(2*$anzahl);
-//    echo str_repeat("<&nbsp>", $leerzeichen);
+
     for($m = 1; $m <=$leerzeichen;$m++){
         echo "<span style='color:white'>O</span>";
     }
