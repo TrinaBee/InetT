@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Fuhrpark Familie Maier</title>
 </head>
 <body>
 
@@ -35,7 +35,7 @@ $maier = [
         "Tochter Lisa" => [ ["VW","up!","2025","rot","90"]]
 ];
 echo "<pre>";
-print_r($maier);
+//print_r($maier);
 echo "</pre>";
 echo "<hr>";
 foreach ($maier as $mitglied => $flotte){
@@ -53,7 +53,7 @@ echo "<hr>";
 array_push($maier["Vater Alfred"], ["Porsche","unbekannt","2025","weiß","460"]);
 
 echo "<pre>";
-print_r($maier);
+//print_r($maier);
 echo "</pre>";
 echo "<hr>";
 
