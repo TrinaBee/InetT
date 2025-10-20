@@ -50,7 +50,7 @@ foreach ($maier as $mitglied => $flotte){
 }
 echo "<hr>";
 
-array_push($maier["Vater Alfred"], ["Porsche","unbekannt","2025","weiß","460"]);
+array_push($maier["Vater Alfred"], ["Porsche","","2025","weiß","460"]);
 
 echo "<pre>";
 //print_r($maier);
